@@ -12,6 +12,7 @@
 		4B14265B24F6D4A500F6971D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B14265924F6D4A500F6971D /* Main.storyboard */; };
 		4B14265D24F6D4A500F6971D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B14265C24F6D4A500F6971D /* Assets.xcassets */; };
 		4B14266024F6D4A500F6971D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B14265E24F6D4A500F6971D /* LaunchScreen.storyboard */; };
+		4B14266B24F6DC5700F6971D /* WordsArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14266A24F6DC5700F6971D /* WordsArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4B14265C24F6D4A500F6971D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B14265F24F6D4A500F6971D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B14266124F6D4A500F6971D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B14266A24F6DC5700F6971D /* WordsArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsArray.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,8 @@
 		4B14265224F6D4A500F6971D /* WordMatchGame */ = {
 			isa = PBXGroup;
 			children = (
+				4B14266C24F6DCED00F6971D /* ModelController */,
+				4B14266924F6DC3400F6971D /* Model */,
 				4B14266824F6D59B00F6971D /* Views */,
 				4B14266724F6D57A00F6971D /* Resources */,
 			);
@@ -78,6 +82,21 @@
 				4B14265924F6D4A500F6971D /* Main.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4B14266924F6DC3400F6971D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B14266A24F6DC5700F6971D /* WordsArray.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B14266C24F6DCED00F6971D /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +172,7 @@
 			files = (
 				4B14265424F6D4A500F6971D /* AppDelegate.swift in Sources */,
 				4B14265624F6D4A500F6971D /* SceneDelegate.swift in Sources */,
+				4B14266B24F6DC5700F6971D /* WordsArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
