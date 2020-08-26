@@ -10,6 +10,9 @@ import Foundation
 
 class WordsArray {
     
-    let words: [String] = []
+    let words: [String]
     
+    init(words: [String]) {
+        self.words = words
+    }
 }
