@@ -1,8 +1,234 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zIL-Q5-2r7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--(Something Creative)-->
+        <scene sceneID="hzI-Hg-tYb">
+            <objects>
+                <viewController id="0wo-mY-JxD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2pY-NI-mUf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nb9-ET-PRo">
+                                <rect key="frame" x="64.5" y="450.5" width="285" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="GENERATE A WORD!"/>
+                                <connections>
+                                    <segue destination="eSa-BK-oFf" kind="show" id="qVQ-BR-8cK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nb9-ET-PRo" firstAttribute="centerX" secondItem="IOD-Rr-Zeb" secondAttribute="centerX" id="8bX-SG-HIi"/>
+                            <constraint firstItem="nb9-ET-PRo" firstAttribute="centerY" secondItem="IOD-Rr-Zeb" secondAttribute="centerY" id="yhb-eE-qhI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IOD-Rr-Zeb"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="(Something Creative)" id="OHK-NW-CHL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OFA-uK-6H7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="499" y="169"/>
+        </scene>
+        <!--(Something Else Createive)-->
+        <scene sceneID="hrF-kv-T5U">
+            <objects>
+                <viewController id="eSa-BK-oFf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ljc-Zx-4Nt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WzF-17-Jbh">
+                                <rect key="frame" x="15.5" y="123" width="383" height="66"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BASE WORD:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDY-D9-hWF">
+                                        <rect key="frame" x="0.0" y="0.0" width="157.5" height="66"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your word here!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EhL-Fj-P4k">
+                                        <rect key="frame" x="172.5" y="0.0" width="210.5" height="66"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="Scb-jl-lgh"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="6DN-3i-zBl">
+                                <rect key="frame" x="27" y="206" width="360" height="348"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bfG-pd-a93">
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="66"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAp-KO-LzI">
+                                                <rect key="frame" x="0.0" y="19" width="35" height="28"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pbA-aA-bJ9">
+                                                <rect key="frame" x="65" y="0.0" width="225" height="66"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="225" id="KFZ-2g-d0H"/>
+                                                    <constraint firstAttribute="height" constant="66" id="ptf-62-XPJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KN9-QP-9PF">
+                                                <rect key="frame" x="320" y="13" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="5mr-Zl-zQT"/>
+                                                    <constraint firstAttribute="width" secondItem="KN9-QP-9PF" secondAttribute="height" multiplier="1:1" id="UeG-Gl-H7B"/>
+                                                    <constraint firstAttribute="width" constant="40" id="eWZ-gv-wuy"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="66" id="Cq1-jF-u4v"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="rQt-Qc-0AI">
+                                        <rect key="frame" x="0.0" y="94" width="360" height="66"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ja-V7-fyP">
+                                                <rect key="frame" x="0.0" y="19" width="35" height="28"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ycs-mN-RwJ">
+                                                <rect key="frame" x="65" y="0.0" width="225" height="66"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="225" id="2tD-5J-7II"/>
+                                                    <constraint firstAttribute="height" constant="66" id="HvC-SR-Sn2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7wD-vb-9Mb">
+                                                <rect key="frame" x="320" y="13" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="Dgm-gq-3br"/>
+                                                    <constraint firstAttribute="height" constant="40" id="Rqc-LN-vYq"/>
+                                                    <constraint firstAttribute="width" secondItem="7wD-vb-9Mb" secondAttribute="height" multiplier="1:1" id="chW-Fg-2IM"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OJG-Bq-sYg">
+                                        <rect key="frame" x="0.0" y="188" width="360" height="66"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#3:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcH-OV-ThP">
+                                                <rect key="frame" x="0.0" y="19" width="35" height="28"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dRy-XW-GoU">
+                                                <rect key="frame" x="65" y="0.0" width="225" height="66"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="225" id="6SJ-7v-I4t"/>
+                                                    <constraint firstAttribute="height" constant="66" id="6UK-Ps-Fcq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CK7-Dl-UNv">
+                                                <rect key="frame" x="320" y="13" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="J52-NB-5D6"/>
+                                                    <constraint firstAttribute="width" constant="40" id="PNC-hH-Nfh"/>
+                                                    <constraint firstAttribute="width" secondItem="CK7-Dl-UNv" secondAttribute="height" multiplier="1:1" id="ytF-X4-agV"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6K5-im-J9M">
+                                        <rect key="frame" x="0.0" y="282" width="360" height="66"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#4:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uc-f9-rXb">
+                                                <rect key="frame" x="0.0" y="19" width="35" height="28"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z5R-2E-gXJ">
+                                                <rect key="frame" x="65" y="0.0" width="225" height="66"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="66" id="K1u-BD-YZg"/>
+                                                    <constraint firstAttribute="width" constant="225" id="LRQ-TX-uJD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aVk-rP-POu">
+                                                <rect key="frame" x="320" y="13" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="LLs-3u-bqn"/>
+                                                    <constraint firstAttribute="width" constant="40" id="gRG-z2-y4B"/>
+                                                    <constraint firstAttribute="width" secondItem="aVk-rP-POu" secondAttribute="height" multiplier="1:1" id="vkc-F6-Yle"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUj-xd-ttr">
+                                <rect key="frame" x="103" y="566" width="208" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <state key="normal" title="Done"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZr-8G-N0i">
+                                <rect key="frame" x="103" y="693" width="208" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <state key="normal" title="Done"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WzF-17-Jbh" firstAttribute="top" secondItem="PbK-z4-FlD" secondAttribute="top" constant="35" id="87p-z9-cHv"/>
+                            <constraint firstItem="WzF-17-Jbh" firstAttribute="centerX" secondItem="PbK-z4-FlD" secondAttribute="centerX" id="b26-ON-Sv5"/>
+                            <constraint firstItem="6DN-3i-zBl" firstAttribute="centerY" secondItem="PbK-z4-FlD" secondAttribute="centerY" multiplier="0.8" id="ecb-92-AEB"/>
+                            <constraint firstItem="6DN-3i-zBl" firstAttribute="centerX" secondItem="PbK-z4-FlD" secondAttribute="centerX" id="jgK-GZ-bbS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PbK-z4-FlD"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="(Something Else Createive)" id="egS-G9-ijd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oTx-BJ-cJ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1271.0144927536232" y="168.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bm4-8r-7R4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zIL-Q5-2r7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aa1-Fh-gD4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0wo-mY-JxD" kind="relationship" relationship="rootViewController" id="LFU-La-x7d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RfZ-c6-ksE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-249.27536231884059" y="169.41964285714286"/>
+        </scene>
+    </scenes>
 </document>
