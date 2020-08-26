@@ -14,6 +14,8 @@
 		4B14266024F6D4A500F6971D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B14265E24F6D4A500F6971D /* LaunchScreen.storyboard */; };
 		4B14266B24F6DC5700F6971D /* WordsArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14266A24F6DC5700F6971D /* WordsArray.swift */; };
 		4B14266E24F6DE1000F6971D /* WordsArrayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14266D24F6DE1000F6971D /* WordsArrayController.swift */; };
+		7525E4E824F70387008E9897 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7525E4E724F70387008E9897 /* InitialViewController.swift */; };
+		7525E4EA24F70404008E9897 /* WordGuessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7525E4E924F70404008E9897 /* WordGuessViewController.swift */; };
 		9F631C2E24F6FD27006CFDE5 /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F631C2D24F6FD27006CFDE5 /* StyleGuide.swift */; };
 		9F631C3024F6FD41006CFDE5 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F631C2F24F6FD41006CFDE5 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
@@ -28,6 +30,8 @@
 		4B14266124F6D4A500F6971D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B14266A24F6DC5700F6971D /* WordsArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsArray.swift; sourceTree = "<group>"; };
 		4B14266D24F6DE1000F6971D /* WordsArrayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsArrayController.swift; sourceTree = "<group>"; };
+		7525E4E724F70387008E9897 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		7525E4E924F70404008E9897 /* WordGuessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGuessViewController.swift; sourceTree = "<group>"; };
 		9F631C2D24F6FD27006CFDE5 /* StyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuide.swift; sourceTree = "<group>"; };
 		9F631C2F24F6FD41006CFDE5 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +91,7 @@
 		4B14266824F6D59B00F6971D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7525E4E624F7036B008E9897 /* ViewControllers */,
 				4B14265924F6D4A500F6971D /* Main.storyboard */,
 			);
 			path = Views;
@@ -106,6 +111,15 @@
 				4B14266D24F6DE1000F6971D /* WordsArrayController.swift */,
 			);
 			path = ModelController;
+			sourceTree = "<group>";
+		};
+		7525E4E624F7036B008E9897 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7525E4E724F70387008E9897 /* InitialViewController.swift */,
+				7525E4E924F70404008E9897 /* WordGuessViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		9F631C2C24F6FD0C006CFDE5 /* CustomUI */ = {
@@ -191,7 +205,9 @@
 				4B14265424F6D4A500F6971D /* AppDelegate.swift in Sources */,
 				4B14265624F6D4A500F6971D /* SceneDelegate.swift in Sources */,
 				4B14266B24F6DC5700F6971D /* WordsArray.swift in Sources */,
+				7525E4E824F70387008E9897 /* InitialViewController.swift in Sources */,
 				9F631C2E24F6FD27006CFDE5 /* StyleGuide.swift in Sources */,
+				7525E4EA24F70404008E9897 /* WordGuessViewController.swift in Sources */,
 				4B14266E24F6DE1000F6971D /* WordsArrayController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
