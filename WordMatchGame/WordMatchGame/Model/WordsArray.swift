@@ -6,13 +6,13 @@
 //  Copyright © 2020 Ian Becker. All rights reserved.
 //
 
-import Foundation
-
-class WordsArray {
-    
-    let words: [String]
-    
-    init(words: [String]) {
-        self.words = words
-    }
-}
+//import Foundation
+//
+//class WordsArray {
+//    
+//    let words: [String]
+//    
+//    init(words: [String]) {
+//        self.words = words
+//    }
+//}
