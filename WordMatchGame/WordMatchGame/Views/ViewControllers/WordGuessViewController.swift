@@ -33,6 +33,8 @@ class WordGuessViewController: UIViewController {
     }
     
     // MARK: - Actions
+    @IBAction func doneButtonTapped(_ sender: Any) {
+    }
     
     
     // MARK: - Methods

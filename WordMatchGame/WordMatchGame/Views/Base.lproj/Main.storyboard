@@ -200,6 +200,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                         <state key="normal" title="Done"/>
+                                        <connections>
+                                            <action selector="doneButtonTapped:" destination="eSa-BK-oFf" eventType="touchUpInside" id="F4U-bl-Xgy"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
