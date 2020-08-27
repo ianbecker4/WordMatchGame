@@ -18,6 +18,8 @@
 		9F4D030224F810500088023E /* wordMatchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D030124F810500088023E /* wordMatchTextField.swift */; };
 		9F4D030424F844370088023E /* wordMatchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D030324F844370088023E /* wordMatchButton.swift */; };
 		9F4D030624F852600088023E /* generateWordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D030524F852600088023E /* generateWordButton.swift */; };
+		9F4D030824F8672C0088023E /* instructionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D030724F8672C0088023E /* instructionLabel.swift */; };
+		9F4D030A24F86A650088023E /* keyboardLayoutConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D030924F86A650088023E /* keyboardLayoutConstraints.swift */; };
 		9F631C2E24F6FD27006CFDE5 /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F631C2D24F6FD27006CFDE5 /* StyleGuide.swift */; };
 		9F631C3024F6FD41006CFDE5 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F631C2F24F6FD41006CFDE5 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
@@ -36,6 +38,8 @@
 		9F4D030124F810500088023E /* wordMatchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordMatchTextField.swift; sourceTree = "<group>"; };
 		9F4D030324F844370088023E /* wordMatchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordMatchButton.swift; sourceTree = "<group>"; };
 		9F4D030524F852600088023E /* generateWordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generateWordButton.swift; sourceTree = "<group>"; };
+		9F4D030724F8672C0088023E /* instructionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instructionLabel.swift; sourceTree = "<group>"; };
+		9F4D030924F86A650088023E /* keyboardLayoutConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keyboardLayoutConstraints.swift; sourceTree = "<group>"; };
 		9F631C2D24F6FD27006CFDE5 /* StyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuide.swift; sourceTree = "<group>"; };
 		9F631C2F24F6FD41006CFDE5 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +120,8 @@
 				9F4D030124F810500088023E /* wordMatchTextField.swift */,
 				9F4D030324F844370088023E /* wordMatchButton.swift */,
 				9F4D030524F852600088023E /* generateWordButton.swift */,
+				9F4D030724F8672C0088023E /* instructionLabel.swift */,
+				9F4D030924F86A650088023E /* keyboardLayoutConstraints.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -194,9 +200,11 @@
 			files = (
 				4B14265424F6D4A500F6971D /* AppDelegate.swift in Sources */,
 				4B14265624F6D4A500F6971D /* SceneDelegate.swift in Sources */,
+				9F4D030A24F86A650088023E /* keyboardLayoutConstraints.swift in Sources */,
 				9F4D030224F810500088023E /* wordMatchTextField.swift in Sources */,
 				7525E4E824F70387008E9897 /* InitialViewController.swift in Sources */,
 				9F4D030024F80F7A0088023E /* wordMatchLabel.swift in Sources */,
+				9F4D030824F8672C0088023E /* instructionLabel.swift in Sources */,
 				9F4D030424F844370088023E /* wordMatchButton.swift in Sources */,
 				9F4D030624F852600088023E /* generateWordButton.swift in Sources */,
 				9F631C2E24F6FD27006CFDE5 /* StyleGuide.swift in Sources */,

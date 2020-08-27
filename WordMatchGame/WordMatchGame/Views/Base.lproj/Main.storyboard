@@ -3,6 +3,7 @@
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,10 +29,29 @@
                                     <segue destination="eSa-BK-oFf" kind="show" identifier="toWordGuessVC" id="qVQ-BR-8cK"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" allowsEditingTextAttributes="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyY-v0-B4k">
+                                <rect key="frame" x="28" y="397.66666666666669" width="319" height="243.66666666666669"/>
+                                <color key="backgroundColor" name="customPink"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">The Goal of the game is to type in a word that has a matching letter in the same index position as the given word. Example: "WORD" has a letter in the first index position of "W", "WHAT" will meet the requirements. Then do it again for "O", "R", and "D". Do it in 30 seconds and you win! Don't...and you suck.</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="2" lineHeightMultiple="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="nb9-ET-PRo" firstAttribute="centerX" secondItem="IOD-Rr-Zeb" secondAttribute="centerX" id="8bX-SG-HIi"/>
+                            <constraint firstItem="cyY-v0-B4k" firstAttribute="centerY" secondItem="IOD-Rr-Zeb" secondAttribute="centerY" multiplier="1.2" id="Afi-o4-I3f"/>
+                            <constraint firstItem="cyY-v0-B4k" firstAttribute="width" secondItem="2pY-NI-mUf" secondAttribute="width" multiplier="0.85" id="B2Q-lW-dTD"/>
+                            <constraint firstItem="cyY-v0-B4k" firstAttribute="centerX" secondItem="IOD-Rr-Zeb" secondAttribute="centerX" id="VED-vM-iEL"/>
+                            <constraint firstItem="cyY-v0-B4k" firstAttribute="height" secondItem="2pY-NI-mUf" secondAttribute="height" multiplier="0.3" id="nTR-1Y-7Hu"/>
                             <constraint firstItem="nb9-ET-PRo" firstAttribute="centerY" secondItem="IOD-Rr-Zeb" secondAttribute="centerY" multiplier="0.8" id="yhb-eE-qhI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IOD-Rr-Zeb"/>
@@ -40,7 +60,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OFA-uK-6H7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="498.55072463768118" y="168.75"/>
+            <point key="canvasLocation" x="498.39999999999998" y="168.4729064039409"/>
         </scene>
         <!--LETTER INDEX MATCHING-->
         <scene sceneID="hrF-kv-T5U">
@@ -50,168 +70,148 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="AHk-ri-Zmz">
-                                <rect key="frame" x="28" y="94.333333333333314" width="319" height="132"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WzF-17-Jbh">
+                                <rect key="frame" x="9.3333333333333428" y="97" width="356.33333333333326" height="66"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WzF-17-Jbh">
-                                        <rect key="frame" x="0.0" y="0.0" width="319" height="66"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="BASE WORD:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDY-D9-hWF" customClass="wordMatchLabel" customModule="WordMatchGame" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="131.33333333333334" height="66"/>
-                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your word here!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EhL-Fj-P4k" customClass="wordMatchTextField" customModule="WordMatchGame" customModuleProvider="target">
-                                                <rect key="frame" x="146.33333333333337" y="0.0" width="172.66666666666663" height="66"/>
-                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="BASE WORD:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDY-D9-hWF" customClass="wordMatchLabel" customModule="WordMatchGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="66"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your word here!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EhL-Fj-P4k" customClass="wordMatchTextField" customModule="WordMatchGame" customModuleProvider="target">
+                                        <rect key="frame" x="161.66666666666669" y="0.0" width="194.66666666666669" height="66"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="Scb-jl-lgh"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bfG-pd-a93">
+                                <rect key="frame" x="7.6666666666666572" y="232.33333333333337" width="360" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAp-KO-LzI" customClass="wordMatchLabel" customModule="WordMatchGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="13.666666666666659" width="35" height="27.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pbA-aA-bJ9" customClass="wordMatchTextField" customModule="WordMatchGame" customModuleProvider="target">
+                                        <rect key="frame" x="65" y="0.0" width="225" height="55"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="66" id="Scb-jl-lgh"/>
+                                            <constraint firstAttribute="width" constant="225" id="KFZ-2g-d0H"/>
+                                            <constraint firstAttribute="height" constant="55" id="ptf-62-XPJ"/>
                                         </constraints>
-                                    </stackView>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" keyboardAppearance="alert" returnKeyType="done"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KN9-QP-9PF">
+                                        <rect key="frame" x="320" y="7.3333333333333144" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="5mr-Zl-zQT"/>
+                                            <constraint firstAttribute="width" secondItem="KN9-QP-9PF" secondAttribute="height" multiplier="1:1" id="UeG-Gl-H7B"/>
+                                            <constraint firstAttribute="width" constant="40" id="eWZ-gv-wuy"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="rQt-Qc-0AI">
+                                <rect key="frame" x="7.6666666666666572" y="293" width="360" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ja-V7-fyP" customClass="wordMatchLabel" customModule="WordMatchGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="13.666666666666687" width="35" height="27.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ycs-mN-RwJ" customClass="wordMatchTextField" customModule="WordMatchGame" customModuleProvider="target">
+                                        <rect key="frame" x="65" y="0.0" width="225" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="225" id="2tD-5J-7II"/>
+                                            <constraint firstAttribute="height" constant="55" id="HvC-SR-Sn2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" keyboardAppearance="alert" returnKeyType="done"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7wD-vb-9Mb">
+                                        <rect key="frame" x="320" y="7.3333333333333144" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="Dgm-gq-3br"/>
+                                            <constraint firstAttribute="height" constant="40" id="Rqc-LN-vYq"/>
+                                            <constraint firstAttribute="width" secondItem="7wD-vb-9Mb" secondAttribute="height" multiplier="1:1" id="chW-Fg-2IM"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OJG-Bq-sYg">
+                                <rect key="frame" x="7.6666666666666572" y="353.66666666666669" width="360" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#3:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcH-OV-ThP" customClass="wordMatchLabel" customModule="WordMatchGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="13.666666666666631" width="35" height="27.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dRy-XW-GoU" customClass="wordMatchTextField" customModule="WordMatchGame" customModuleProvider="target">
+                                        <rect key="frame" x="65" y="0.0" width="225" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="225" id="6SJ-7v-I4t"/>
+                                            <constraint firstAttribute="height" constant="55" id="6UK-Ps-Fcq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" keyboardAppearance="alert" returnKeyType="done"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CK7-Dl-UNv">
+                                        <rect key="frame" x="320" y="7.3333333333333144" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="J52-NB-5D6"/>
+                                            <constraint firstAttribute="width" constant="40" id="PNC-hH-Nfh"/>
+                                            <constraint firstAttribute="width" secondItem="CK7-Dl-UNv" secondAttribute="height" multiplier="1:1" id="ytF-X4-agV"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6K5-im-J9M">
+                                <rect key="frame" x="7.6666666666666572" y="414" width="360" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#4:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uc-f9-rXb" customClass="wordMatchLabel" customModule="WordMatchGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="13.666666666666687" width="35" height="27.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z5R-2E-gXJ" customClass="wordMatchTextField" customModule="WordMatchGame" customModuleProvider="target">
+                                        <rect key="frame" x="65" y="0.0" width="225" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="K1u-BD-YZg"/>
+                                            <constraint firstAttribute="width" constant="225" id="LRQ-TX-uJD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" keyboardAppearance="alert" returnKeyType="done"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aVk-rP-POu">
+                                        <rect key="frame" x="320" y="7.6666666666666856" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="LLs-3u-bqn"/>
+                                            <constraint firstAttribute="width" constant="40" id="gRG-z2-y4B"/>
+                                            <constraint firstAttribute="width" secondItem="aVk-rP-POu" secondAttribute="height" multiplier="1:1" id="vkc-F6-Yle"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="97" translatesAutoresizingMaskIntoConstraints="NO" id="nkP-iG-P6y">
+                                <rect key="frame" x="47" y="170.33333333333334" width="281" height="49"/>
+                                <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLT-BA-JgT" customClass="wordMatchLabel" customModule="WordMatchGame" customModuleProvider="target">
-                                        <rect key="frame" x="79.666666666666671" y="94.000000000000014" width="159.66666666666663" height="37.999999999999986"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="86.333333333333329" height="49"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="33"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="wLT-BA-JgT" firstAttribute="width" secondItem="AHk-ri-Zmz" secondAttribute="width" multiplier="0.5" id="k0V-yZ-sjI"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="Zok-18-shu">
-                                <rect key="frame" x="7.6666666666666572" y="234.66666666666663" width="360" height="483"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="6DN-3i-zBl">
-                                        <rect key="frame" x="0.0" y="0.0" width="360" height="348"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bfG-pd-a93">
-                                                <rect key="frame" x="0.0" y="0.0" width="360" height="66"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAp-KO-LzI" customClass="wordMatchLabel" customModule="WordMatchGame" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="19.333333333333343" width="35" height="27.666666666666671"/>
-                                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pbA-aA-bJ9" customClass="wordMatchTextField" customModule="WordMatchGame" customModuleProvider="target">
-                                                        <rect key="frame" x="65" y="0.0" width="225" height="66"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="225" id="KFZ-2g-d0H"/>
-                                                            <constraint firstAttribute="height" constant="66" id="ptf-62-XPJ"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KN9-QP-9PF">
-                                                        <rect key="frame" x="320" y="13" width="40" height="40"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="5mr-Zl-zQT"/>
-                                                            <constraint firstAttribute="width" secondItem="KN9-QP-9PF" secondAttribute="height" multiplier="1:1" id="UeG-Gl-H7B"/>
-                                                            <constraint firstAttribute="width" constant="40" id="eWZ-gv-wuy"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="66" id="Cq1-jF-u4v"/>
-                                                </constraints>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="rQt-Qc-0AI">
-                                                <rect key="frame" x="0.0" y="94.000000000000028" width="360" height="66"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ja-V7-fyP" customClass="wordMatchLabel" customModule="WordMatchGame" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="19.333333333333314" width="35" height="27.666666666666671"/>
-                                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ycs-mN-RwJ" customClass="wordMatchTextField" customModule="WordMatchGame" customModuleProvider="target">
-                                                        <rect key="frame" x="65" y="0.0" width="225" height="66"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="225" id="2tD-5J-7II"/>
-                                                            <constraint firstAttribute="height" constant="66" id="HvC-SR-Sn2"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7wD-vb-9Mb">
-                                                        <rect key="frame" x="320" y="13" width="40" height="40"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="40" id="Dgm-gq-3br"/>
-                                                            <constraint firstAttribute="height" constant="40" id="Rqc-LN-vYq"/>
-                                                            <constraint firstAttribute="width" secondItem="7wD-vb-9Mb" secondAttribute="height" multiplier="1:1" id="chW-Fg-2IM"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OJG-Bq-sYg">
-                                                <rect key="frame" x="0.0" y="188.00000000000003" width="360" height="66"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#3:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcH-OV-ThP" customClass="wordMatchLabel" customModule="WordMatchGame" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="19.333333333333314" width="35" height="27.666666666666671"/>
-                                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dRy-XW-GoU" customClass="wordMatchTextField" customModule="WordMatchGame" customModuleProvider="target">
-                                                        <rect key="frame" x="65" y="0.0" width="225" height="66"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="225" id="6SJ-7v-I4t"/>
-                                                            <constraint firstAttribute="height" constant="66" id="6UK-Ps-Fcq"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CK7-Dl-UNv">
-                                                        <rect key="frame" x="320" y="13" width="40" height="40"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="J52-NB-5D6"/>
-                                                            <constraint firstAttribute="width" constant="40" id="PNC-hH-Nfh"/>
-                                                            <constraint firstAttribute="width" secondItem="CK7-Dl-UNv" secondAttribute="height" multiplier="1:1" id="ytF-X4-agV"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6K5-im-J9M">
-                                                <rect key="frame" x="0.0" y="282" width="360" height="66"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#4:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uc-f9-rXb" customClass="wordMatchLabel" customModule="WordMatchGame" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="19.333333333333371" width="35" height="27.666666666666671"/>
-                                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z5R-2E-gXJ" customClass="wordMatchTextField" customModule="WordMatchGame" customModuleProvider="target">
-                                                        <rect key="frame" x="65" y="0.0" width="225" height="66"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="66" id="K1u-BD-YZg"/>
-                                                            <constraint firstAttribute="width" constant="225" id="LRQ-TX-uJD"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aVk-rP-POu">
-                                                        <rect key="frame" x="320" y="13" width="40" height="40"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="LLs-3u-bqn"/>
-                                                            <constraint firstAttribute="width" constant="40" id="gRG-z2-y4B"/>
-                                                            <constraint firstAttribute="width" secondItem="aVk-rP-POu" secondAttribute="height" multiplier="1:1" id="vkc-F6-Yle"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZr-8G-N0i" customClass="wordMatchButton" customModule="WordMatchGame" customModuleProvider="target">
-                                        <rect key="frame" x="55" y="408" width="250" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="250" id="38r-eI-WXU"/>
-                                            <constraint firstAttribute="height" constant="75" id="Wjk-qb-pjb"/>
-                                        </constraints>
+                                        <rect key="frame" x="183.33333333333334" y="0.0" width="97.666666666666657" height="49"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                         <state key="normal" title="Done"/>
                                         <connections>
@@ -220,14 +220,33 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Asset_3THELASTONE" translatesAutoresizingMaskIntoConstraints="NO" id="460-6G-SPg">
+                                <rect key="frame" x="87.666666666666686" y="506.33333333333326" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="460-6G-SPg" secondAttribute="height" multiplier="1:1" id="X6G-eu-TMH"/>
+                                    <constraint firstAttribute="height" constant="200" id="i4g-m0-Dqk"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Zok-18-shu" firstAttribute="centerX" secondItem="PbK-z4-FlD" secondAttribute="centerX" id="OAK-fL-M8W"/>
-                            <constraint firstItem="Zok-18-shu" firstAttribute="centerY" secondItem="PbK-z4-FlD" secondAttribute="centerY" multiplier="1.1" id="PdC-xh-95y"/>
-                            <constraint firstItem="AHk-ri-Zmz" firstAttribute="centerX" secondItem="PbK-z4-FlD" secondAttribute="centerX" id="VPp-oB-Bcs"/>
-                            <constraint firstItem="AHk-ri-Zmz" firstAttribute="centerY" secondItem="PbK-z4-FlD" secondAttribute="centerY" multiplier="0.37" id="add-ka-Tbg"/>
-                            <constraint firstItem="WzF-17-Jbh" firstAttribute="width" secondItem="ljc-Zx-4Nt" secondAttribute="width" multiplier="0.85" id="xdl-g7-EA2"/>
+                            <constraint firstItem="WzF-17-Jbh" firstAttribute="centerY" secondItem="PbK-z4-FlD" secondAttribute="centerY" multiplier="0.3" id="GcR-N0-OzY"/>
+                            <constraint firstItem="460-6G-SPg" firstAttribute="centerY" secondItem="PbK-z4-FlD" secondAttribute="centerY" multiplier="1.4" id="Jfq-uy-OrY"/>
+                            <constraint firstItem="nkP-iG-P6y" firstAttribute="width" secondItem="ljc-Zx-4Nt" secondAttribute="width" multiplier="0.75" id="PSv-3N-xpv"/>
+                            <constraint firstItem="6K5-im-J9M" firstAttribute="centerX" secondItem="PbK-z4-FlD" secondAttribute="centerX" id="PkQ-PE-PG7"/>
+                            <constraint firstItem="460-6G-SPg" firstAttribute="centerX" secondItem="PbK-z4-FlD" secondAttribute="centerX" id="QG0-ck-qaS"/>
+                            <constraint firstItem="rQt-Qc-0AI" firstAttribute="centerX" secondItem="PbK-z4-FlD" secondAttribute="centerX" id="Rne-I4-1Y6"/>
+                            <constraint firstItem="bfG-pd-a93" firstAttribute="centerY" secondItem="PbK-z4-FlD" secondAttribute="centerY" multiplier="0.6" id="Rta-Vz-OI3"/>
+                            <constraint firstItem="WzF-17-Jbh" firstAttribute="centerX" secondItem="PbK-z4-FlD" secondAttribute="centerX" id="SFd-sS-RMh"/>
+                            <constraint firstItem="nkP-iG-P6y" firstAttribute="height" secondItem="ljc-Zx-4Nt" secondAttribute="height" multiplier="0.06" id="VYQ-46-6pa"/>
+                            <constraint firstItem="rQt-Qc-0AI" firstAttribute="centerY" secondItem="PbK-z4-FlD" secondAttribute="centerY" multiplier="0.74" id="Zd8-9K-uNE"/>
+                            <constraint firstItem="nkP-iG-P6y" firstAttribute="centerX" secondItem="PbK-z4-FlD" secondAttribute="centerX" id="cxO-9m-Q2L"/>
+                            <constraint firstItem="WzF-17-Jbh" firstAttribute="width" secondItem="ljc-Zx-4Nt" secondAttribute="width" multiplier="0.95" id="e6S-YD-CXJ"/>
+                            <constraint firstItem="nkP-iG-P6y" firstAttribute="centerY" secondItem="PbK-z4-FlD" secondAttribute="centerY" multiplier="0.45" id="gGB-cO-MlN"/>
+                            <constraint firstItem="OJG-Bq-sYg" firstAttribute="centerX" secondItem="PbK-z4-FlD" secondAttribute="centerX" id="iyL-GO-hA6"/>
+                            <constraint firstItem="6K5-im-J9M" firstAttribute="centerY" secondItem="PbK-z4-FlD" secondAttribute="centerY" multiplier="1.02" id="kfd-WF-tL4"/>
+                            <constraint firstItem="bfG-pd-a93" firstAttribute="centerX" secondItem="PbK-z4-FlD" secondAttribute="centerX" id="mgW-Fc-A2r"/>
+                            <constraint firstItem="OJG-Bq-sYg" firstAttribute="centerY" secondItem="PbK-z4-FlD" secondAttribute="centerY" multiplier="0.88" id="urr-sJ-Fg2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PbK-z4-FlD"/>
                     </view>
@@ -278,4 +297,10 @@
             <point key="canvasLocation" x="-249.27536231884059" y="169.41964285714286"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Asset_3THELASTONE" width="121" height="121"/>
+        <namedColor name="customPink">
+            <color red="0.94509803921568625" green="0.35686274509803922" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

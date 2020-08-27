@@ -44,6 +44,8 @@ class WordGuessViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.hideKeyboardWhenTappedAround()
+        
         // Do any additional setup after loading the view.
         firstLetterTextField.delegate = self
         secondLetterTextField.delegate = self
@@ -53,25 +55,60 @@ class WordGuessViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func doneButtonTapped(_ sender: Any) {
-        if firstLetterImageView.image == UIImage(systemName: "checkmark.circle.fill") && secondLetterImageView.image == UIImage(systemName: "checkmark.circle.fill") && thirdLetterImageView.image == UIImage(systemName: "checkmark.circle.fill") && fourthLetterImageView.image == UIImage(systemName: "checkmark.circle.fill") {
-            doneButton.backgroundColor = .red
+        
+        if firstLetterImageView.image == UIImage(systemName: "checkmark.circle.fill")?.withTintColor(UIColor(red: 123/255, green: 224/255, blue: 173/255, alpha: 1), renderingMode: .alwaysOriginal)
+            && secondLetterImageView.image == UIImage(systemName: "checkmark.circle.fill")?.withTintColor(UIColor(red: 123/255, green: 224/255, blue: 173/255, alpha: 1), renderingMode: .alwaysOriginal)
+            && thirdLetterImageView.image == UIImage(systemName: "checkmark.circle.fill")?.withTintColor(UIColor(red: 123/255, green: 224/255, blue: 173/255, alpha: 1), renderingMode: .alwaysOriginal)
+            && fourthLetterImageView.image == UIImage(systemName: "checkmark.circle.fill")?.withTintColor(UIColor(red: 123/255, green: 224/255, blue: 173/255, alpha: 1), renderingMode: .alwaysOriginal) {
             
-            navigationController?.popViewController(animated: true)
+            self.alertUserOfSuccess()
         }
-        // Else, perhaps present an AlertController saying that we have words that are not correct.
     }
     
     
     // MARK: - Methods
+    func redDoneButton() {
+        if firstLetterImageView.image == UIImage(systemName: "checkmark.circle.fill")?.withTintColor(UIColor(red: 123/255, green: 224/255, blue: 173/255, alpha: 1), renderingMode: .alwaysOriginal)
+        && secondLetterImageView.image == UIImage(systemName: "checkmark.circle.fill")?.withTintColor(UIColor(red: 123/255, green: 224/255, blue: 173/255, alpha: 1), renderingMode: .alwaysOriginal)
+        && thirdLetterImageView.image == UIImage(systemName: "checkmark.circle.fill")?.withTintColor(UIColor(red: 123/255, green: 224/255, blue: 173/255, alpha: 1), renderingMode: .alwaysOriginal)
+            && fourthLetterImageView.image == UIImage(systemName: "checkmark.circle.fill")?.withTintColor(UIColor(red: 123/255, green: 224/255, blue: 173/255, alpha: 1), renderingMode: .alwaysOriginal) {
+            
+            self.doneButton.backgroundColor = .red
+        }
+    }
+    func alertUserOfSuccess() {
+        
+        let alertController = UIAlertController(title: "You Win!", message: "You should feel proud of your vocabulary!", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "I do feel proud, thanks!", style: .default) { (_) in
+            DispatchQueue.main.async {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+        alertController.addAction(okAction)
+        present(alertController, animated: true)
+    }
+    
+    func alertUserOfLoss() {
+        let alertController = UIAlertController(title: "You're pitiful...", message: "That really wasn't that hard...what's the matter with you?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "You're right... :(", style: .default) { (_) in
+            DispatchQueue.main.async {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+        alertController.addAction(okAction)
+        present(alertController, animated: true)
+    }
+    
     func startTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
-            if self.secondsRemaining > 0 {
+            if self.secondsRemaining >= 0 {
                 self.timerLabel.text = self.timeFormatted(self.secondsRemaining)
-//                self.timerLabel.text = "\(self.secondsRemaining)"
+                self.redDoneButton()
                 self.secondsRemaining -= 1
             }
             else {
                 Timer.invalidate()
+                self.alertUserOfLoss()
             }
             print("\(self.secondsRemaining)")
         }
@@ -141,3 +178,15 @@ extension WordGuessViewController: UITextFieldDelegate {
         }
     }
 }//End of Class
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
