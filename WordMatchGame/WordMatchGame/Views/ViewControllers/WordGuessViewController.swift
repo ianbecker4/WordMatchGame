@@ -27,18 +27,17 @@ class WordGuessViewController: UIViewController {
     @IBOutlet weak var doneButton: UIButton!
     
     // MARK: - Properties
-    var baseWord: String = "" {
-        didSet {
-            // update the views for this baseWord (baseWordTextField)
-        }
-    }
+    var baseWord: String = ""
     
     var timer: Timer = Timer()
     
-    
-    
-    
     // MARK: - LifeCycle Methods
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        updateViews()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,11 +65,9 @@ class WordGuessViewController: UIViewController {
         baseWordTextField.text = baseWord
         doneButton.backgroundColor = .lightGray
         self.view.backgroundColor = .customDarkPurple
-        
-        
     }
-
 }
+
 extension WordGuessViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
