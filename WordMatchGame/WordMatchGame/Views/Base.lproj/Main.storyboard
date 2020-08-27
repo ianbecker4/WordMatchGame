@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zIL-Q5-2r7">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--(Something Creative)-->
+        <!--LIM-->
         <scene sceneID="hzI-Hg-tYb">
             <objects>
                 <viewController id="0wo-mY-JxD" customClass="InitialViewController" customModule="WordMatchGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2pY-NI-mUf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nb9-ET-PRo">
-                                <rect key="frame" x="32" y="347.5" width="350" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nb9-ET-PRo" customClass="generateWordButton" customModule="WordMatchGame" customModuleProvider="target">
+                                <rect key="frame" x="12.666666666666657" y="314" width="350" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="EJT-Yd-cWo"/>
                                     <constraint firstAttribute="height" constant="65" id="P3H-LL-IgJ"/>
@@ -36,34 +36,34 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IOD-Rr-Zeb"/>
                     </view>
-                    <navigationItem key="navigationItem" title="(Something Creative)" id="OHK-NW-CHL"/>
+                    <navigationItem key="navigationItem" title="LIM" id="OHK-NW-CHL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OFA-uK-6H7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="498.55072463768118" y="168.75"/>
         </scene>
-        <!--(Something Else Createive)-->
+        <!--LETTER INDEX MATCHING-->
         <scene sceneID="hrF-kv-T5U">
             <objects>
                 <viewController id="eSa-BK-oFf" customClass="WordGuessViewController" customModule="WordMatchGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ljc-Zx-4Nt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="AHk-ri-Zmz">
-                                <rect key="frame" x="15.5" y="110" width="383" height="132"/>
+                                <rect key="frame" x="28" y="94.333333333333314" width="319" height="132"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WzF-17-Jbh">
-                                        <rect key="frame" x="0.0" y="0.0" width="383" height="66"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="319" height="66"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BASE WORD:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDY-D9-hWF">
-                                                <rect key="frame" x="0.0" y="0.0" width="157.5" height="66"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="BASE WORD:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDY-D9-hWF" customClass="wordMatchLabel" customModule="WordMatchGame" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="131.33333333333334" height="66"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your word here!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EhL-Fj-P4k">
-                                                <rect key="frame" x="172.5" y="0.0" width="210.5" height="66"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your word here!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EhL-Fj-P4k" customClass="wordMatchTextField" customModule="WordMatchGame" customModuleProvider="target">
+                                                <rect key="frame" x="146.33333333333337" y="0.0" width="172.66666666666663" height="66"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -72,8 +72,8 @@
                                             <constraint firstAttribute="height" constant="66" id="Scb-jl-lgh"/>
                                         </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLT-BA-JgT">
-                                        <rect key="frame" x="96" y="94" width="191.5" height="38"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLT-BA-JgT" customClass="wordMatchLabel" customModule="WordMatchGame" customModuleProvider="target">
+                                        <rect key="frame" x="79.666666666666671" y="94.000000000000014" width="159.66666666666663" height="37.999999999999986"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="33"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -84,7 +84,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="Zok-18-shu">
-                                <rect key="frame" x="27" y="281" width="360" height="483"/>
+                                <rect key="frame" x="7.6666666666666572" y="234.66666666666663" width="360" height="483"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="6DN-3i-zBl">
                                         <rect key="frame" x="0.0" y="0.0" width="360" height="348"/>
@@ -92,13 +92,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bfG-pd-a93">
                                                 <rect key="frame" x="0.0" y="0.0" width="360" height="66"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAp-KO-LzI">
-                                                        <rect key="frame" x="0.0" y="19" width="35" height="28"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAp-KO-LzI" customClass="wordMatchLabel" customModule="WordMatchGame" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="19.333333333333343" width="35" height="27.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pbA-aA-bJ9">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pbA-aA-bJ9" customClass="wordMatchTextField" customModule="WordMatchGame" customModuleProvider="target">
                                                         <rect key="frame" x="65" y="0.0" width="225" height="66"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="225" id="KFZ-2g-d0H"/>
@@ -121,15 +121,15 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="rQt-Qc-0AI">
-                                                <rect key="frame" x="0.0" y="94" width="360" height="66"/>
+                                                <rect key="frame" x="0.0" y="94.000000000000028" width="360" height="66"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ja-V7-fyP">
-                                                        <rect key="frame" x="0.0" y="19" width="35" height="28"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ja-V7-fyP" customClass="wordMatchLabel" customModule="WordMatchGame" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="19.333333333333314" width="35" height="27.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ycs-mN-RwJ">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ycs-mN-RwJ" customClass="wordMatchTextField" customModule="WordMatchGame" customModuleProvider="target">
                                                         <rect key="frame" x="65" y="0.0" width="225" height="66"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="225" id="2tD-5J-7II"/>
@@ -149,15 +149,15 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OJG-Bq-sYg">
-                                                <rect key="frame" x="0.0" y="188" width="360" height="66"/>
+                                                <rect key="frame" x="0.0" y="188.00000000000003" width="360" height="66"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#3:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcH-OV-ThP">
-                                                        <rect key="frame" x="0.0" y="19" width="35" height="28"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#3:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcH-OV-ThP" customClass="wordMatchLabel" customModule="WordMatchGame" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="19.333333333333314" width="35" height="27.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dRy-XW-GoU">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dRy-XW-GoU" customClass="wordMatchTextField" customModule="WordMatchGame" customModuleProvider="target">
                                                         <rect key="frame" x="65" y="0.0" width="225" height="66"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="225" id="6SJ-7v-I4t"/>
@@ -179,13 +179,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6K5-im-J9M">
                                                 <rect key="frame" x="0.0" y="282" width="360" height="66"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#4:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uc-f9-rXb">
-                                                        <rect key="frame" x="0.0" y="19" width="35" height="28"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#4:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uc-f9-rXb" customClass="wordMatchLabel" customModule="WordMatchGame" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="19.333333333333371" width="35" height="27.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z5R-2E-gXJ">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z5R-2E-gXJ" customClass="wordMatchTextField" customModule="WordMatchGame" customModuleProvider="target">
                                                         <rect key="frame" x="65" y="0.0" width="225" height="66"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="66" id="K1u-BD-YZg"/>
@@ -206,7 +206,7 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZr-8G-N0i">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZr-8G-N0i" customClass="wordMatchButton" customModule="WordMatchGame" customModuleProvider="target">
                                         <rect key="frame" x="55" y="408" width="250" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="38r-eI-WXU"/>
@@ -227,10 +227,11 @@
                             <constraint firstItem="Zok-18-shu" firstAttribute="centerY" secondItem="PbK-z4-FlD" secondAttribute="centerY" multiplier="1.1" id="PdC-xh-95y"/>
                             <constraint firstItem="AHk-ri-Zmz" firstAttribute="centerX" secondItem="PbK-z4-FlD" secondAttribute="centerX" id="VPp-oB-Bcs"/>
                             <constraint firstItem="AHk-ri-Zmz" firstAttribute="centerY" secondItem="PbK-z4-FlD" secondAttribute="centerY" multiplier="0.37" id="add-ka-Tbg"/>
+                            <constraint firstItem="WzF-17-Jbh" firstAttribute="width" secondItem="ljc-Zx-4Nt" secondAttribute="width" multiplier="0.85" id="xdl-g7-EA2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PbK-z4-FlD"/>
                     </view>
-                    <navigationItem key="navigationItem" title="(Something Else Createive)" id="egS-G9-ijd"/>
+                    <navigationItem key="navigationItem" title="LETTER INDEX MATCHING" id="egS-G9-ijd"/>
                     <connections>
                         <outlet property="baseWordTextField" destination="EhL-Fj-P4k" id="Frc-1a-owo"/>
                         <outlet property="doneButton" destination="BZr-8G-N0i" id="Ucy-5c-J8e"/>
@@ -238,7 +239,7 @@
                         <outlet property="firstLetterTextField" destination="pbA-aA-bJ9" id="I8h-4b-qrQ"/>
                         <outlet property="fourthLetterImageView" destination="aVk-rP-POu" id="kQF-3o-HFG"/>
                         <outlet property="fourthLetterTextField" destination="z5R-2E-gXJ" id="2gL-st-bac"/>
-                        <outlet property="secondLetterImageView" destination="CK7-Dl-UNv" id="4QZ-yJ-S2T"/>
+                        <outlet property="secondLetterImageView" destination="7wD-vb-9Mb" id="Rfn-OV-YNt"/>
                         <outlet property="secondLetterTextField" destination="Ycs-mN-RwJ" id="NzU-23-fxV"/>
                         <outlet property="thirdLetterImageView" destination="CK7-Dl-UNv" id="xNz-iW-8md"/>
                         <outlet property="thirdLetterTextField" destination="dRy-XW-GoU" id="M2Y-OA-fLq"/>
@@ -255,7 +256,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zIL-Q5-2r7" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aa1-Fh-gD4">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

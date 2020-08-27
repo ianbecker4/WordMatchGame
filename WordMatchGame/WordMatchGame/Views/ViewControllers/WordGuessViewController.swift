@@ -29,13 +29,16 @@ class WordGuessViewController: UIViewController {
     // MARK: - Properties
     var baseWord: String = ""
     
-    var timer: Timer = Timer()
+    var timer = Timer()
+    
+    var secondsRemaining = 30
     
     // MARK: - LifeCycle Methods
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         updateViews()
+        startTimer()
     }
     
     override func viewDidLoad() {
@@ -60,11 +63,31 @@ class WordGuessViewController: UIViewController {
     
     
     // MARK: - Methods
+    func startTimer() {
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
+            if self.secondsRemaining > 0 {
+                self.timerLabel.text = self.timeFormatted(self.secondsRemaining)
+//                self.timerLabel.text = "\(self.secondsRemaining)"
+                self.secondsRemaining -= 1
+            }
+            else {
+                Timer.invalidate()
+            }
+            print("\(self.secondsRemaining)")
+        }
+    }
+    
+    func timeFormatted(_ secondsRemianing: Int) -> String {
+        let seconds: Int = secondsRemaining % 60
+        return String(format: "0:%02d", seconds)
+    }
     
     func updateViews() {
-        baseWordTextField.text = baseWord
+        baseWordTextField.text = baseWord.uppercased()
         doneButton.backgroundColor = .lightGray
         self.view.backgroundColor = .customDarkPurple
+        
+        timerLabel.text = timeFormatted(secondsRemaining)
     }
 }
 
@@ -79,9 +102,9 @@ extension WordGuessViewController: UITextFieldDelegate {
             let firstWordArray = Array(firstWordText.lowercased())
             
             if baseWordArray[0] == firstWordArray[0] {
-                firstLetterImageView.image = UIImage(systemName: "checkmark.circle.fill")
+                firstLetterImageView.image = UIImage(systemName: "checkmark.circle.fill")?.withTintColor(UIColor(red: 123/255, green: 224/255, blue: 173/255, alpha: 1), renderingMode: .alwaysOriginal)
             } else {
-                firstLetterImageView.image = UIImage(systemName: "xmark.octagon.fill")
+                firstLetterImageView.image = UIImage(systemName: "xmark.octagon.fill")?.withTintColor(.red, renderingMode: .alwaysOriginal)
             }
         }
         else if textField == secondLetterTextField {
@@ -90,9 +113,9 @@ extension WordGuessViewController: UITextFieldDelegate {
             let secondWordArray = Array(secondWordText.lowercased())
             
             if baseWordArray[1] == secondWordArray[1] {
-                secondLetterImageView.image = UIImage(systemName: "checkmark.circle.fill")
+                secondLetterImageView.image = UIImage(systemName: "checkmark.circle.fill")?.withTintColor(UIColor(red: 123/255, green: 224/255, blue: 173/255, alpha: 1), renderingMode: .alwaysOriginal)
             } else {
-                secondLetterImageView.image = UIImage(systemName: "xmark.octagon.fill")
+                secondLetterImageView.image = UIImage(systemName: "xmark.octagon.fill")?.withTintColor(.red, renderingMode: .alwaysOriginal)
             }
         }
         else if textField == thirdLetterTextField {
@@ -101,9 +124,9 @@ extension WordGuessViewController: UITextFieldDelegate {
             let thirdWordArray = Array(thirdWordText.lowercased())
             
             if baseWordArray[2] == thirdWordArray[2] {
-                thirdLetterImageView.image = UIImage(systemName: "checkmark.circle.fill")
+                thirdLetterImageView.image = UIImage(systemName: "checkmark.circle.fill")?.withTintColor(UIColor(red: 123/255, green: 224/255, blue: 173/255, alpha: 1), renderingMode: .alwaysOriginal)
             } else {
-                thirdLetterImageView.image = UIImage(systemName: "xmark.octagon.fill")
+                thirdLetterImageView.image = UIImage(systemName: "xmark.octagon.fill")?.withTintColor(.red, renderingMode: .alwaysOriginal)
             }
         } else {
             
@@ -111,10 +134,10 @@ extension WordGuessViewController: UITextFieldDelegate {
             let fourthWordArray = Array(fourthWordText.lowercased())
             
             if baseWordArray[3] == fourthWordArray[3] {
-                fourthLetterImageView.image = UIImage(systemName: "checkmark.circle.fill")
+                fourthLetterImageView.image = UIImage(systemName: "checkmark.circle.fill")?.withTintColor(UIColor(red: 123/255, green: 224/255, blue: 173/255, alpha: 1), renderingMode: .alwaysOriginal)
             } else {
-                fourthLetterImageView.image = UIImage(systemName: "xmark.octagon.fill")
+                fourthLetterImageView.image = UIImage(systemName: "xmark.octagon.fill")?.withTintColor(.red, renderingMode: .alwaysOriginal)
             }
         }
     }
-}
+}//End of Class
